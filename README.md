@@ -33,7 +33,8 @@ I chose to expose the "UI" as a command line interface (CLI) mostly due to time 
     * Web API with Web UI
     * Aspect oriented validation
       * Utilizing PostSharp or another AOP library, create aspects for validation so that we can annotate either the method or method params with validation attributes and have the code read a little cleaner. I wanted to implement this on this solution but it felt a little overbuilt and would have taken too much time.
-    * Factory pattern for building color objects
+    * Use reflection to create instances of the colorcodes instead of a static dictionary.
+      * This would mean less maintenance if things were added later but there is a performance trade-off and it's unlikely that new colors are going to be added anyway.
 
 ### Packages Used in Solution
   * [FluentAssertions](https://github.com/fluentassertions/fluentassertions)
