@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -7,7 +7,18 @@ namespace CodingChallenge.Models.Validation
 {
     public static class ValidationExtensions
     {
-        /// <summary>         /// Throws a standardized ArgumentNullException if null or an empty string.         /// </summary>         /// <param name="paramName">Name of the parameter or field.</param>         /// <exception cref="ArgumentNullException"></exception>         public static void ThrowIfNullOrEmpty(this string value, string paramName)         {             if (String.IsNullOrEmpty(value))             {                 throw new ArgumentNullException(nameof(paramName), "Value must not be null or empty.");             }         }
+        /// <summary>
+        /// Throws a standardized ArgumentNullException if null or an empty string.
+        /// </summary>
+        /// <param name="paramName">Name of the parameter or field.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        public static void ThrowIfNullOrEmpty(this string value, string paramName)
+        {
+            if (String.IsNullOrEmpty(value))
+            {
+                throw new ArgumentNullException(nameof(paramName), "Value must not be null or empty.");
+            }
+        }
 
         /// <summary>
         /// Throws a standardized ArgumentNullException if the object is null.
